@@ -31,7 +31,7 @@ Program.prototype.getDataProgram = function () {
   this.listOfMovieInProgram.forEach(function (m) {
     sum += parseInt(m.length);
   });
-  return ( this.date +"program has:" + this.listOfMovieInProgram.length + " " +"duration "+sum
+  return ( this.date +","+" program has: " + this.listOfMovieInProgram.length + " movies; " +"duration: "+sum+" min;"
   );
 };
 
@@ -73,7 +73,7 @@ function addMovieToProgram() {
 
   var output = "";
   elementProgram.listOfMovieInProgram.forEach(function (movie) {
-    output += movie.getDataMovie();
+    output += movie.getDataMovie()+" ; ";
 
     var selectP =programSelectElement.options[programSelectElement.selectedIndex];
     selectP.textContent = elementProgram.getDataProgram();

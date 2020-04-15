@@ -123,3 +123,6 @@ function outputTotalMovieLength() {
   movieLength.textContent =
     "Total length is : " + totalMoviesLength() + " min.";
 }
+title.addEventListener("focus", function () {
+  error.style.display = "none";
+})
