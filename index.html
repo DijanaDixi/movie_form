@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <h1>Movie festival</h1>
+    <form>
+        <fieldset name="movie">
+            <p>Please fill in the form</p>
+            <p>Movie</p>
+            <fieldset>
+                
+                <!-- Title input -->
+                <label>Title</label>
+                <input type="text" name="movie-title" class="movie-title" placeholder="Title" required>
+                <div class="title-error" style="display: none"id="error-message">Required*</div>
+                <br>
+
+                <!-- Movie length input -->
+                <label>Length (min)</label>
+                <input type="number" name="movie-length" class="movie-length" placeholder="Length in min" required>
+                <div class="error-length"></div>
+
+
+                <!-- Genre select dropdown  -->
+                <select name="genre-select" class="genre-select">
+                   
+                   
+                </select>
+
+                <!-- Error message initialy empty -->
+                <div class="movie-error error"></div>
+                <ul class="movie-output">
+                   
+                </ul>
+
+
+                <!-- Crete movie button -->
+                <input type="button" class="create-movie" value="Create movie">
+
+                <!-- Movie list place holder -->
+            </fieldset>
+            <div class="message">
+                <p id="calculate-movies-lenght"></p>
+            </div>
+            <ul id="list-created-movies"></ul>
+            <p>Program</p>
+
+            <fieldset>
+                <label>Date</label>
+                <input type="date" name="program-date" class="program-date">
+
+                <!-- Error message initialy empty -->
+                <div class="program-error error"></div>
+
+                <input type="button" class="create-program" value="Create program">
+                <div class="program-data"></div>
+
+                <hr>
+
+                <label for="movie-select">Movie</label>
+                <select name="movie-select" class="movie-select">
+                    
+                </select>
+
+                <label for="program-select">Program</label>
+                <select name="program-select" class="program-select">
+                    <!-- <option value="">-</option> -->
+                </select>
+
+                <div class="assign-error error"></div>
+
+                <input type="button" class="add-movie" value="Add movie to program">
+                
+                
+            </fieldset>
+        </form>
+
+            <!-- <script src="./js/form.js"></script>
+            <script src="./js/entities.js"></script> -->
+            <script src="./js/movie.js"></script>
+            <script src="./js/program.js"></script>
+         
+</body>
+</html>
